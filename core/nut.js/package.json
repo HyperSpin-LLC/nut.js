@@ -54,7 +54,8 @@
     "publish:next": "pnpm publish --tag next --no-git-checks",
     "publish:release": "pnpm publish --no-git-checks",
     "prepublishOnly": "pnpm run compile",
-    "typedoc": "typedoc --out docs"
+    "typedoc": "typedoc --out docs",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@nut-tree/default-clipboard-provider": "workspace:*",
