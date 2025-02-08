@@ -1,7 +1,16 @@
 {
   "name": "@nut-tree/monorepo",
   "version": "4.2.0",
-  "private": true,
+  "packageManager": "pnpm@8.15.2",
+  "workspaces": [
+    "core/*",
+    "providers/*",
+    "examples/*",
+    "e2e/*"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "pnpm -r test",
     "compile": "pnpm -r run compile",
@@ -13,13 +22,6 @@
     "typedoc-all": "pnpm -r run typedoc",
     "typedoc": "pnpm run typedoc-all && typedoc"
   },
-  "packageManager": "pnpm@8.15.2",
-  "workspaces": [
-    "core/*",
-    "providers/*",
-    "examples/*",
-    "e2e/*"
-  ],
   "devDependencies": {
     "@types/jest": "29.5.12",
     "@types/node": "20.11.17",
